@@ -15,7 +15,7 @@ This Payload CMS application manages content for the News Website. It provides a
 1. Start the MongoDB database:
 
    ```bash
-   docker-compose up -d
+   docker compose up -d
    ```
 
    This will start MongoDB on port 27019.

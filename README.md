@@ -30,7 +30,7 @@ npm -i g corepack && corepack enable pnpm
 2. Start MongoDB using Docker
 
    ```bash
-   docker-compose up -d
+   docker compose up -d
    ```
 
 3. Install dependencies and start the development server
