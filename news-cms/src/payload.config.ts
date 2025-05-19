@@ -7,7 +7,6 @@ import sharp from 'sharp'
 
 import { Users } from './collections/Users'
 import { Article } from './collections/Article'
-import { Homepage } from './collections/Homepage'
 import { seed } from './seed'
 
 const filename = fileURLToPath(import.meta.url)
@@ -25,7 +24,7 @@ export default buildConfig({
     },
   },
   telemetry: false,
-  collections: [Users, Article, Homepage],
+  collections: [Users, Article],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
