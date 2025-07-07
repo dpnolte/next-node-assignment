@@ -69,7 +69,6 @@ export interface Config {
   collections: {
     users: User;
     articles: Article;
-    homepages: Homepage;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -78,7 +77,6 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     articles: ArticlesSelect<false> | ArticlesSelect<true>;
-    homepages: HomepagesSelect<false> | HomepagesSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -145,17 +143,6 @@ export interface Article {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "homepages".
- */
-export interface Homepage {
-  id: string;
-  title?: string | null;
-  articles?: (string | Article)[] | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -168,10 +155,6 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'articles';
         value: string | Article;
-      } | null)
-    | ({
-        relationTo: 'homepages';
-        value: string | Homepage;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -237,16 +220,6 @@ export interface UsersSelect<T extends boolean = true> {
 export interface ArticlesSelect<T extends boolean = true> {
   title?: T;
   publicationDateTime?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "homepages_select".
- */
-export interface HomepagesSelect<T extends boolean = true> {
-  title?: T;
-  articles?: T;
   updatedAt?: T;
   createdAt?: T;
 }
