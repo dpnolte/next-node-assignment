@@ -30,7 +30,7 @@ Your implementation should:
 3. Then fetch the most recent articles by `publicationDateTime` (descending order)
 4. Merge these results so that pinned articles appear in their specified positions, displacing regular articles as needed
 5. Ensure the total number of returned articles is capped at 10
-6. Handle edge cases such as:
+6. Consider edge cases such as:
    - Multiple articles with the same `pinPosition` (use `publicationDateTime` as a tiebreaker)
    - `pinPosition` values beyond the limit of 10 (these should be ignored)
    - Articles with invalid `pinPosition` values
@@ -53,4 +53,4 @@ Your implementation should:
 5. Test the endpoint by visiting `http://localhost:3001/api/articles/recent`
 6. Verify that pinned articles appear in their specified positions
 
-Good luck! We're looking for a clean, efficient implementation that handles all the edge cases.
+Good luck! We're looking for a clean, efficient implementation that demonstrates your ability to handle a more complex feature with a lot information to deep dive into.

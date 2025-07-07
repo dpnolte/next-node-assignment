@@ -39,7 +39,7 @@ Create an API endpoint at [`news-website/src/app/api/articles/route.ts`](https:/
 
 ## Bonus Points
 
-1. Implement unit tests for the endpoint
+1. Describe how you would create tests for the endpoint
 2. Add rate limiting
 3. Add logging
 4. Implement more advanced filtering options
@@ -53,4 +53,4 @@ Create an API endpoint at [`news-website/src/app/api/articles/route.ts`](https:/
 4. Test error scenarios by temporarily disabling the CMS or modifying the URL
 5. Use tools like Postman or the browser’s fetch API to test the endpoint directly
 
-Good luck! We’re looking for clean code, attention to detail, and robust error handling.
+Good luck!
